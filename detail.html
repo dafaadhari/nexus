@@ -1,140 +1,365 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Berita - Nexus News</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <title>Ketegangan di Parlemen: Dua Fraksi Bersitegang Soal RUU Kesehatan - Nexus News</title>
+    <meta name="description"
+        content="Debat panas mewarnai sidang paripurna siang ini setelah fraksi oposisi secara tegas menolak klausul privasi data dalam RUU Kesehatan terbaru.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ketegangan di Parlemen: Dua Fraksi Bersitegang Soal RUU Kesehatan">
+    <meta property="og:description"
+        content="Debat panas mewarnai sidang paripurna siang ini setelah fraksi oposisi menolak klausul privasi data.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://nexusnews.id/nasional/ketegangan-parlemen-ruu-kesehatan">
+    <meta property="og:image" content="https://nexusnews.id/assets/img/parlemen-thumb.jpg">
+    <meta property="og:site_name" content="Nexus News">
+    <meta property="article:published_time" content="2026-09-20T14:30:00+07:00">
+    <meta property="article:author" content="Aditya Pratama">
+    <meta property="article:section" content="Nasional">
+    <meta property="article:tag" content="DPR RI">
+    <meta property="article:tag" content="RUU Kesehatan">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ketegangan di Parlemen: Dua Fraksi Bersitegang Soal RUU Kesehatan">
+    <meta name="twitter:description"
+        content="Debat panas mewarnai sidang paripurna siang ini setelah fraksi oposisi menolak klausul privasi data.">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #050505; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #050505;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
+
 <body class="text-gray-200">
 
-    <!-- Responsive Header Glassmorphism -->
+    <!-- ═══════════════════════ HEADER ═══════════════════════ -->
     <header class="bg-black/90 backdrop-blur-md border-b border-gray-800/60 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-            <!-- Logo -->
-            <div class="flex items-center gap-3 cursor-pointer">
-                <div class="w-10 h-10 bg-amber-400 rounded flex items-center justify-center text-black font-extrabold text-xl">N</div>
-                <span class="text-2xl font-extrabold tracking-tight text-white hidden sm:block">NEXUS<span class="text-amber-400">.</span></span>
-            </div>
-            
-            <!-- Desktop Nav -->
-            <nav class="hidden lg:flex space-x-8 text-[13px] font-bold uppercase tracking-widest text-gray-400">
-                <a href="#" class="hover:text-amber-400 transition-colors">Utama</a>
-                <a href="#" class="text-white hover:text-amber-400 transition-colors">Nasional</a>
-                <a href="#" class="hover:text-amber-400 transition-colors">Teknologi</a>
-                <a href="#" class="hover:text-amber-400 transition-colors">Gaya Hidup</a>
+            <a href="index.html" id="logo-home" class="flex items-center gap-3 cursor-pointer">
+                <div
+                    class="w-10 h-10 bg-amber-400 rounded flex items-center justify-center text-black font-extrabold text-xl shadow-[0_0_15px_rgba(251,191,36,0.3)]">
+                    N</div>
+                <span class="text-2xl font-extrabold tracking-tight text-white hidden sm:block">NEXUS<span
+                        class="text-amber-400">.</span></span>
+            </a>
+            <nav id="desktop-nav"
+                class="hidden lg:flex space-x-8 text-[13px] font-bold uppercase tracking-widest text-gray-400">
+                <a href="index.html" class="hover:text-amber-400 transition-colors">Utama</a>
+                <a href="kategori.html" class="text-amber-400">Nasional</a>
+                <a href="kategori.html" class="hover:text-amber-400 transition-colors">Teknologi</a>
+                <a href="kategori.html" class="hover:text-amber-400 transition-colors">Gaya Hidup</a>
+                <a href="search.html" class="hover:text-amber-400 transition-colors">🔍</a>
             </nav>
-
-            <!-- Mobile Menu Button & Search -->
             <div class="flex items-center gap-4">
-                <button class="hidden md:block text-xs font-bold uppercase tracking-widest bg-white text-black px-4 py-2 rounded-full hover:bg-amber-400 transition">Berlangganan</button>
-                <button id="mobile-menu-btn" class="lg:hidden text-gray-400 hover:text-white">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <a href="pasang-iklan.html"
+                    class="hidden md:block text-xs font-bold uppercase tracking-widest bg-white text-black px-4 py-2 rounded-full hover:bg-amber-400 transition">Pasang
+                    Iklan</a>
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-400 hover:text-white" aria-label="Toggle menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
                 </button>
             </div>
         </div>
-
-        <!-- Mobile Nav Dropdown (Hidden by default) -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-black border-t border-gray-800/60 px-4 py-4 space-y-4 text-sm font-bold uppercase tracking-widest">
-            <a href="#" class="block text-gray-400 hover:text-amber-400">Utama</a>
-            <a href="#" class="block text-white">Nasional</a>
-            <a href="#" class="block text-gray-400 hover:text-amber-400">Teknologi</a>
-            <a href="#" class="block text-gray-400 hover:text-amber-400">Gaya Hidup</a>
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-black/95 backdrop-blur-lg border-t border-gray-800/60 px-4 py-4 space-y-4 text-sm font-bold uppercase tracking-widest">
+            <a href="index.html" class="block text-gray-400 hover:text-white transition">Utama</a>
+            <a href="kategori.html" class="block text-amber-400">Nasional</a>
+            <a href="kategori.html" class="block text-gray-400 hover:text-white transition">Teknologi</a>
+            <a href="kategori.html" class="block text-gray-400 hover:text-white transition">Gaya Hidup</a>
+            <a href="search.html" class="block text-gray-400 hover:text-white transition">Pencarian</a>
+            <a href="redaksi.html" class="block text-gray-400 hover:text-white transition">Redaksi</a>
         </div>
     </header>
 
+    <!-- ═══════════════════════ MAIN ═══════════════════════ -->
     <main class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-3 gap-10">
-        
-        <!-- Main Article Content (2 Cols) -->
+
+        <!-- ──────── Article Content (2 Cols) ──────── -->
         <article class="lg:col-span-2">
             <!-- Breadcrumb -->
-            <div class="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-amber-400 mb-6">
-                <a href="#" class="hover:text-white transition">Beranda</a>
-                <span class="text-gray-600">/</span>
-                <a href="#" class="hover:text-white transition">Nasional</a>
-            </div>
+            <nav id="breadcrumb"
+                class="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-gray-500 mb-6"
+                aria-label="Breadcrumb">
+                <a href="index.html" class="text-amber-400 hover:text-white transition">Beranda</a>
+                <span class="text-gray-700">/</span>
+                <a href="kategori.html" class="text-amber-400 hover:text-white transition">Nasional</a>
+                <span class="text-gray-700">/</span>
+                <span class="text-gray-500">Detail</span>
+            </nav>
 
-            <!-- Title & Meta -->
-            <h1 class="text-3xl md:text-5xl font-extrabold leading-[1.2] text-white mb-6">Ketegangan di Parlemen: Dua Fraksi Bersitegang Soal RUU Kesehatan</h1>
-            
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-y border-gray-800/60 py-4 mb-8">
+            <!-- Title -->
+            <h1 class="text-3xl md:text-5xl font-extrabold leading-[1.15] text-white mb-6">Ketegangan di Parlemen: Dua
+                Fraksi Bersitegang Soal RUU Kesehatan</h1>
+
+            <!-- Author & Share Bar -->
+            <div
+                class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-y border-gray-800/60 py-4 mb-8">
                 <div class="flex items-center gap-3">
-                    <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center font-bold text-lg">A</div>
+                    <div
+                        class="w-12 h-12 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center font-bold text-lg text-black">
+                        A</div>
                     <div>
                         <span class="block text-sm font-bold text-white">Aditya Pratama</span>
-                        <span class="block text-xs text-gray-500 font-medium">Editor: Rania S. • 20 Sep 2026, 14:30 WIB</span>
+                        <span class="block text-xs text-gray-500 font-medium">Editor: Rania S. • 20 Sep 2026, 14:30
+                            WIB</span>
                     </div>
                 </div>
-                <!-- Share Buttons -->
-                <div class="flex gap-2">
-                    <button class="w-8 h-8 rounded-full bg-[#1DA1F2] text-white flex items-center justify-center hover:opacity-80 transition text-xs font-bold">Tw</button>
-                    <button class="w-8 h-8 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:opacity-80 transition text-xs font-bold">Wa</button>
-                    <button class="w-8 h-8 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-gray-700 transition text-xs font-bold">🔗</button>
+                <!-- Social Share -->
+                <div id="social-share" class="flex gap-2">
+                    <button
+                        class="w-9 h-9 rounded-full bg-[#1DA1F2] text-white flex items-center justify-center hover:opacity-80 transition text-xs font-bold"
+                        title="Share ke Twitter">Tw</button>
+                    <button
+                        class="w-9 h-9 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:opacity-80 transition text-xs font-bold"
+                        title="Share ke WhatsApp">Wa</button>
+                    <button
+                        class="w-9 h-9 rounded-full bg-[#1877F2] text-white flex items-center justify-center hover:opacity-80 transition text-xs font-bold"
+                        title="Share ke Facebook">Fb</button>
+                    <button
+                        class="w-9 h-9 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-gray-700 transition text-xs font-bold"
+                        title="Copy link">🔗</button>
                 </div>
             </div>
 
             <!-- Hero Image -->
-            <div class="w-full h-[250px] md:h-[400px] bg-gray-800 rounded-xl mb-3 flex items-center justify-center text-gray-500 font-bold">
+            <div
+                class="w-full h-[250px] md:h-[420px] bg-gray-800 rounded-2xl mb-3 flex items-center justify-center text-gray-500 font-bold overflow-hidden">
                 [FOTO PARLEMEN / ILUSTRASI]
             </div>
-            <p class="text-xs text-gray-500 italic mb-8 border-b border-gray-800/60 pb-4">Suasana sidang paripurna yang diwarnai interupsi dari berbagai fraksi. (Foto: Nexus/Dokumentasi)</p>
+            <p class="text-xs text-gray-500 italic mb-8 border-b border-gray-800/60 pb-4">Suasana sidang paripurna yang
+                diwarnai interupsi dari berbagai fraksi. (Foto: Nexus/Dokumentasi)</p>
 
             <!-- Article Body -->
             <div class="prose prose-invert prose-lg max-w-none text-gray-300 leading-relaxed space-y-6">
-                <p><strong class="text-white">JAKARTA, NEXUS</strong> - Debat panas mewarnai sidang paripurna siang ini setelah fraksi oposisi secara tegas menolak klausul privasi data dalam Rancangan Undang-Undang (RUU) Kesehatan terbaru.</p>
-                <p>Ketegangan bermula ketika pimpinan sidang mencoba mengesahkan draf final yang dianggap masih memiliki celah terkait perlindungan data rekam medis elektronik pasien.</p>
+                <p><strong class="text-white">JAKARTA, NEXUS</strong> – Debat panas mewarnai sidang paripurna siang ini
+                    setelah fraksi oposisi secara tegas menolak klausul privasi data dalam Rancangan Undang-Undang (RUU)
+                    Kesehatan terbaru.</p>
+
+                <p>Ketegangan bermula ketika pimpinan sidang mencoba mengesahkan draf final yang dianggap masih memiliki
+                    celah terkait perlindungan data rekam medis elektronik pasien. Beberapa anggota dewan dari fraksi
+                    oposisi langsung mengajukan interupsi berturut-turut.</p>
+
+                <p>"Kami sudah mengkaji draf ini selama berbulan-bulan. Masih ada lubang besar di pasal 47 ayat 3 yang
+                    berpotensi disalahgunakan," ujar salah satu anggota fraksi saat mengambil podium.</p>
+
+                <!-- In-Article Native Ad -->
+                <div id="ad-in-article"
+                    class="relative w-full h-[100px] bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-xl overflow-hidden flex items-center justify-center group cursor-pointer hover:border-amber-500/30 transition-colors my-8 not-prose">
+                    <div
+                        class="absolute top-2 left-3 bg-black/50 backdrop-blur px-2 py-1 rounded text-[10px] text-gray-400 font-semibold border border-gray-700 uppercase tracking-widest">
+                        Sponsored</div>
+                    <span
+                        class="block text-base font-extrabold text-gray-700 group-hover:text-amber-500 transition-colors">[IKLAN
+                        IN-ARTICLE NATIVE]</span>
+                </div>
+
                 <!-- Blockquote -->
-                <blockquote class="border-l-4 border-amber-400 pl-4 py-2 bg-gray-900/50 rounded-r-lg text-white font-semibold italic my-8">
-                    "Kita tidak bisa menyerahkan data jutaan warga negara ke sistem yang belum teruji audit keamanannya secara independen."
+                <blockquote
+                    class="border-l-4 border-amber-400 pl-6 py-3 bg-gray-900/50 rounded-r-xl text-white font-semibold italic my-8 text-lg">
+                    "Kita tidak bisa menyerahkan data jutaan warga negara ke sistem yang belum teruji audit keamanannya
+                    secara independen."
+                    <footer class="text-xs text-gray-500 mt-2 not-italic font-normal">— Anggota Komisi IX DPR RI
+                    </footer>
                 </blockquote>
-                <p>Sidang terpaksa diskors selama 30 menit akibat hujan interupsi. Hingga berita ini diturunkan, lobi-lobi antar pimpinan fraksi masih berlangsung secara tertutup di ruang komisi.</p>
+
+                <p>Sidang terpaksa diskors selama 30 menit akibat hujan interupsi dari berbagai fraksi. Ketua sidang
+                    sempat mengetukkan palu berkali-kali untuk menertibkan suasana yang semakin memanas.</p>
+
+                <p>Hingga berita ini diturunkan, lobi-lobi antar pimpinan fraksi masih berlangsung secara tertutup di
+                    ruang komisi. Pihak pemerintah melalui Menteri Kesehatan menyatakan siap mengakomodasi masukan,
+                    namun menolak menunda pembahasan lebih lama.</p>
+
+                <h2 class="text-2xl font-extrabold text-white">Reaksi dari Kalangan Akademisi</h2>
+
+                <p>Pakar hukum kesehatan dari Universitas Indonesia, Prof. Dr. Margareth Tan, menyebut bahwa
+                    kekhawatiran fraksi oposisi "sangat beralasan mengingat preseden kebocoran data kesehatan di
+                    beberapa negara ASEAN dalam dua tahun terakhir."</p>
+
+                <p>Sidang direncanakan akan dilanjutkan esok hari pukul 10:00 WIB. Beberapa kelompok masyarakat sipil
+                    juga telah menyatakan rencana untuk menggelar aksi damai di depan gedung DPR.</p>
             </div>
 
             <!-- Tags -->
-            <div class="mt-10 pt-6 border-t border-gray-800/60 flex items-center gap-3 flex-wrap">
+            <div id="article-tags" class="mt-10 pt-6 border-t border-gray-800/60 flex items-center gap-3 flex-wrap">
                 <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">Tags:</span>
-                <a href="#" class="bg-gray-900 border border-gray-700 hover:border-amber-400 px-3 py-1.5 rounded text-xs font-bold transition">#DPRRI</a>
-                <a href="#" class="bg-gray-900 border border-gray-700 hover:border-amber-400 px-3 py-1.5 rounded text-xs font-bold transition">#RUUHukum</a>
-                <a href="#" class="bg-gray-900 border border-gray-700 hover:border-amber-400 px-3 py-1.5 rounded text-xs font-bold transition">#Politik2026</a>
-            </div>
-        </article>
-
-        <!-- Sidebar (1 Col) -->
-        <aside class="space-y-8">
-            <!-- Ad Slot Rectangle -->
-            <div class="w-full h-[250px] bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-xl flex items-center justify-center group cursor-pointer relative">
-                <div class="absolute top-2 left-2 bg-black/50 text-[10px] text-gray-400 px-2 py-1 rounded border border-gray-700 uppercase">Sponsored</div>
-                <span class="text-xl font-extrabold text-gray-700 group-hover:text-amber-500 transition">[IKLAN 300x250]</span>
+                <a href="search.html"
+                    class="bg-gray-900 border border-gray-700 hover:border-amber-400 hover:text-amber-400 px-3 py-1.5 rounded-lg text-xs font-bold transition">#DPRRI</a>
+                <a href="search.html"
+                    class="bg-gray-900 border border-gray-700 hover:border-amber-400 hover:text-amber-400 px-3 py-1.5 rounded-lg text-xs font-bold transition">#RUUKesehatan</a>
+                <a href="search.html"
+                    class="bg-gray-900 border border-gray-700 hover:border-amber-400 hover:text-amber-400 px-3 py-1.5 rounded-lg text-xs font-bold transition">#Politik2026</a>
+                <a href="search.html"
+                    class="bg-gray-900 border border-gray-700 hover:border-amber-400 hover:text-amber-400 px-3 py-1.5 rounded-lg text-xs font-bold transition">#PrivasiData</a>
             </div>
 
-            <!-- Baca Juga -->
-            <div>
-                <h3 class="text-lg font-extrabold uppercase tracking-widest border-l-4 border-amber-400 pl-3 mb-6">Terkait</h3>
-                <div class="space-y-4">
-                    <a href="#" class="block group">
-                        <h4 class="text-sm font-bold text-gray-300 group-hover:text-amber-400 transition leading-snug">Pemerintah Jamin Keamanan Server Pusat Data Nasional</h4>
-                        <span class="text-xs text-gray-600 mt-1 block">Kemarin</span>
+            <!-- Artikel Terkait (Bottom) -->
+            <div class="mt-12">
+                <h3 class="text-xl font-extrabold uppercase tracking-widest border-l-4 border-amber-400 pl-3 mb-6">
+                    Artikel Terkait</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <a href="detail.html"
+                        class="group flex flex-col bg-[#0a0a0a] rounded-xl border border-gray-800/60 hover:border-amber-500/50 transition-all overflow-hidden">
+                        <div class="w-full h-40 bg-gray-800 overflow-hidden">
+                            <div
+                                class="w-full h-full group-hover:scale-105 transition-transform duration-500 flex items-center justify-center text-gray-600 font-semibold">
+                                [GAMBAR]</div>
+                        </div>
+                        <div class="p-4">
+                            <h4
+                                class="text-sm font-bold text-gray-200 group-hover:text-amber-400 transition-colors leading-snug">
+                                Pemerintah Jamin Keamanan Server Pusat Data Nasional</h4>
+                            <span class="text-[11px] text-gray-600 mt-2 block">Kemarin • Nasional</span>
+                        </div>
                     </a>
-                    <a href="#" class="block group">
-                        <h4 class="text-sm font-bold text-gray-300 group-hover:text-amber-400 transition leading-snug">Survei: Kepercayaan Publik Terhadap Parlemen Menurun</h4>
-                        <span class="text-xs text-gray-600 mt-1 block">3 Hari Lalu</span>
+                    <a href="detail.html"
+                        class="group flex flex-col bg-[#0a0a0a] rounded-xl border border-gray-800/60 hover:border-amber-500/50 transition-all overflow-hidden">
+                        <div class="w-full h-40 bg-gray-800 overflow-hidden">
+                            <div
+                                class="w-full h-full group-hover:scale-105 transition-transform duration-500 flex items-center justify-center text-gray-600 font-semibold">
+                                [GAMBAR]</div>
+                        </div>
+                        <div class="p-4">
+                            <h4
+                                class="text-sm font-bold text-gray-200 group-hover:text-amber-400 transition-colors leading-snug">
+                                Survei: Kepercayaan Publik Terhadap Parlemen Menurun Drastis</h4>
+                            <span class="text-[11px] text-gray-600 mt-2 block">3 Hari Lalu • Nasional</span>
+                        </div>
                     </a>
                 </div>
             </div>
-        </aside>
+        </article>
 
+        <!-- ──────── Sidebar ──────── -->
+        <aside class="space-y-8">
+            <!-- Ad Slot: Sidebar Rectangle (300x250) -->
+            <div id="ad-sidebar"
+                class="w-full h-[250px] bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-xl flex items-center justify-center group cursor-pointer relative hover:border-amber-500/30 transition-colors">
+                <div
+                    class="absolute top-2 left-2 bg-black/50 backdrop-blur text-[10px] text-gray-400 px-2 py-1 rounded border border-gray-700 uppercase tracking-widest">
+                    Sponsored</div>
+                <span class="text-lg font-extrabold text-gray-700 group-hover:text-amber-500 transition">[IKLAN
+                    300×250]</span>
+            </div>
+
+            <!-- Baca Juga / Terkait -->
+            <div id="sidebar-related">
+                <h3 class="text-lg font-extrabold uppercase tracking-widest border-l-4 border-amber-400 pl-3 mb-6">Baca
+                    Juga</h3>
+                <div class="space-y-4">
+                    <a href="detail.html" class="block group p-3 rounded-lg hover:bg-gray-900/50 transition">
+                        <h4 class="text-sm font-bold text-gray-300 group-hover:text-amber-400 transition leading-snug">
+                            Pemerintah Jamin Keamanan Server Pusat Data Nasional</h4>
+                        <span class="text-[11px] text-gray-600 mt-1 block">Kemarin • 1.2K views</span>
+                    </a>
+                    <a href="detail.html" class="block group p-3 rounded-lg hover:bg-gray-900/50 transition">
+                        <h4 class="text-sm font-bold text-gray-300 group-hover:text-amber-400 transition leading-snug">
+                            Survei: Kepercayaan Publik Terhadap Parlemen Menurun Drastis</h4>
+                        <span class="text-[11px] text-gray-600 mt-1 block">3 Hari Lalu • 980 views</span>
+                    </a>
+                    <a href="detail.html" class="block group p-3 rounded-lg hover:bg-gray-900/50 transition">
+                        <h4 class="text-sm font-bold text-gray-300 group-hover:text-amber-400 transition leading-snug">
+                            Revolusi Diam-Diam di Balik Industri Garmen Nasional</h4>
+                        <span class="text-[11px] text-gray-600 mt-1 block">Hari Ini • 2.4K views</span>
+                    </a>
+                    <a href="detail.html" class="block group p-3 rounded-lg hover:bg-gray-900/50 transition">
+                        <h4 class="text-sm font-bold text-gray-300 group-hover:text-amber-400 transition leading-snug">
+                            Startup Lokal Sukses Ciptakan Baterai Kendaraan Listrik</h4>
+                        <span class="text-[11px] text-gray-600 mt-1 block">Hari Ini • 1.5K views</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Topik Terkait -->
+            <div id="sidebar-topics">
+                <h3 class="text-lg font-extrabold uppercase tracking-widest border-l-4 border-amber-400 pl-3 mb-6">Topik
+                    Terkait</h3>
+                <div class="flex flex-wrap gap-2">
+                    <a href="search.html"
+                        class="bg-gray-900 border border-gray-700 hover:border-amber-400 hover:text-amber-400 px-4 py-2 rounded-lg text-xs font-bold transition">#DPRRI</a>
+                    <a href="search.html"
+                        class="bg-gray-900 border border-gray-700 hover:border-amber-400 hover:text-amber-400 px-4 py-2 rounded-lg text-xs font-bold transition">#RUUKesehatan</a>
+                    <a href="search.html"
+                        class="bg-gray-900 border border-gray-700 hover:border-amber-400 hover:text-amber-400 px-4 py-2 rounded-lg text-xs font-bold transition">#Politik2026</a>
+                    <a href="search.html"
+                        class="bg-gray-900 border border-gray-700 hover:border-amber-400 hover:text-amber-400 px-4 py-2 rounded-lg text-xs font-bold transition">#PrivasiData</a>
+                </div>
+            </div>
+        </aside>
     </main>
 
-    <!-- Script for Mobile Menu Toggle -->
+    <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+    <footer class="border-t border-gray-800 bg-black">
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div class="md:col-span-1">
+                    <a href="index.html" class="text-2xl font-extrabold tracking-tight text-white">NEXUS<span
+                            class="text-amber-400">.</span></a>
+                    <p class="text-sm text-gray-500 mt-3 leading-relaxed">Portal berita modern Indonesia. Menyajikan
+                        informasi terkini, terpercaya, dan mendalam.</p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Navigasi</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="index.html" class="hover:text-white transition">Beranda</a></li>
+                        <li><a href="kategori.html" class="hover:text-white transition">Nasional</a></li>
+                        <li><a href="kategori.html" class="hover:text-white transition">Teknologi</a></li>
+                        <li><a href="kategori.html" class="hover:text-white transition">Gaya Hidup</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Perusahaan</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="redaksi.html" class="hover:text-white transition">Tentang Redaksi</a></li>
+                        <li><a href="redaksi.html" class="hover:text-white transition">Pedoman Media Siber</a></li>
+                        <li><a href="pasang-iklan.html" class="hover:text-white transition">Pasang Iklan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Kontak</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li>redaksi@nexusnews.id</li>
+                        <li>iklan@nexusnews.id</li>
+                        <li class="text-gray-600">Jakarta, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-800/60 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-xs text-gray-600">&copy; 2026 Nexus Media Group. All rights reserved.</div>
+                <div class="flex gap-4 text-xs text-gray-600">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script>
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
         });
     </script>
 </body>
+
 </html>
