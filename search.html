@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pencarian Berita - Nexus News</title>
-    <meta name="description" content="Cari berita terkini di Nexus News. Filter berdasarkan kata kunci, kategori, dan tanggal.">
+    <meta name="description"
+        content="Cari berita terkini di Nexus News. Filter berdasarkan kata kunci, kategori, dan tanggal.">
     <meta name="robots" content="noindex, follow">
 
     <!-- Open Graph -->
@@ -14,41 +16,67 @@
     <meta property="og:site_name" content="Nexus News">
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #050505; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #050505;
+        }
     </style>
 </head>
+
 <body class="text-gray-200">
 
-        <!-- ═══════════════════════ HEADER ═══════════════════════ -->
+    <!-- ═══════════════════════ HEADER ═══════════════════════ -->
     <header class="bg-black/90 backdrop-blur-md border-b border-gray-800/60 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
             <a href="index.html" id="logo-home" class="flex items-center gap-3 cursor-pointer shrink-0">
-                <div class="w-10 h-10 bg-amber-400 rounded flex items-center justify-center text-black font-extrabold text-xl shadow-[0_0_15px_rgba(251,191,36,0.3)]">N</div>
-                <span class="text-2xl font-extrabold tracking-tight text-white hidden sm:block">NEXUS<span class="text-amber-400">.</span></span>
+                <div
+                    class="w-10 h-10 bg-amber-400 rounded flex items-center justify-center text-black font-extrabold text-xl shadow-[0_0_15px_rgba(251,191,36,0.3)]">
+                    N</div>
+                <span class="text-2xl font-extrabold tracking-tight text-white hidden sm:block">NEXUS<span
+                        class="text-amber-400">.</span></span>
             </a>
-            
-            <nav id="desktop-nav" class="hidden xl:flex items-center space-x-5 text-[12px] font-bold uppercase tracking-widest text-gray-400">
+
+            <nav id="desktop-nav"
+                class="hidden xl:flex items-center space-x-5 text-[12px] font-bold uppercase tracking-widest text-gray-400">
                 <a href="index.html" class="hover:text-amber-400 transition-colors">Utama</a>
                 <a href="kategori-nasional.html" class="hover:text-amber-400 transition-colors">Nasional</a>
                 <a href="kategori-jabodetabek.html" class="hover:text-amber-400 transition-colors">Jabodetabek</a>
-                
+
                 <!-- Dropdown Banten -->
                 <div class="relative group">
                     <button class="flex items-center gap-1 hover:text-amber-400 transition-colors py-2">
-                        Banten
-                        <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        BANTEN
+                        <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </button>
                     <!-- TODO: Saat migrasi ke Laravel, tabel `categories` butuh kolom `parent_id` (self-referencing FK) untuk merepresentasikan relasi Banten -> 5 sub-kategori ini. -->
-                    <div class="absolute top-full left-0 mt-0 w-48 bg-black/95 backdrop-blur-lg border border-gray-800 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left group-hover:translate-y-0 translate-y-2 z-50">
+                    <div
+                        class="absolute top-full left-0 mt-0 w-48 bg-black/95 backdrop-blur-lg border border-gray-800 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left group-hover:translate-y-0 translate-y-2 z-50">
                         <div class="py-2 flex flex-col text-[11px]">
-                            <a href="kategori-banten.html" class="px-4 py-2 hover:bg-gray-900 hover:text-amber-400 transition-colors text-white border-b border-gray-800/50">Semua Banten</a>
-                            <a href="kategori-lebak-today.html" class="px-4 py-2 hover:bg-gray-900 hover:text-amber-400 transition-colors">Lebak Today</a>
-                            <a href="kategori-cilegon-today.html" class="px-4 py-2 hover:bg-gray-900 hover:text-amber-400 transition-colors">Cilegon Today</a>
-                            <a href="kategori-pandeglang-today.html" class="px-4 py-2 hover:bg-gray-900 hover:text-amber-400 transition-colors">Pandeglang Today</a>
-                            <a href="kategori-serang-today.html" class="px-4 py-2 hover:bg-gray-900 hover:text-amber-400 transition-colors">Serang Today</a>
-                            <a href="kategori-tangerang-today.html" class="px-4 py-2 hover:bg-gray-900 hover:text-amber-400 transition-colors">Tangerang Today</a>
+                            <a href="kategori-banten.html"
+                                class="px-4 py-2 hover:bg-gray-900 hover:text-amber-400 transition-colors text-white border-b border-gray-800/50">Semua
+                                Banten</a>
+                            <a href="kategori-lebak-today.html"
+                                class="px-4 py-2 hover:bg-gray-900 hover:text-amber-400 transition-colors">Lebak
+                                Today</a>
+                            <a href="kategori-cilegon-today.html"
+                                class="px-4 py-2 hover:bg-gray-900 hover:text-amber-400 transition-colors">Cilegon
+                                Today</a>
+                            <a href="kategori-pandeglang-today.html"
+                                class="px-4 py-2 hover:bg-gray-900 hover:text-amber-400 transition-colors">Pandeglang
+                                Today</a>
+                            <a href="kategori-serang-today.html"
+                                class="px-4 py-2 hover:bg-gray-900 hover:text-amber-400 transition-colors">Serang
+                                Today</a>
+                            <a href="kategori-tangerang-today.html"
+                                class="px-4 py-2 hover:bg-gray-900 hover:text-amber-400 transition-colors">Tangerang
+                                Today</a>
                         </div>
                     </div>
                 </div>
@@ -63,41 +91,59 @@
             </nav>
 
             <div class="flex items-center gap-4 shrink-0">
-                <a href="pasang-iklan.html" class="hidden md:block text-[11px] font-bold uppercase tracking-widest bg-white text-black px-4 py-2 rounded-full hover:bg-amber-400 transition">Pasang Iklan</a>
+                <a href="pasang-iklan.html"
+                    class="hidden md:block text-[11px] font-bold uppercase tracking-widest bg-white text-black px-4 py-2 rounded-full hover:bg-amber-400 transition">Pasang
+                    Iklan</a>
                 <button id="mobile-menu-btn" class="xl:hidden text-gray-400 hover:text-white" aria-label="Toggle menu">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
                 </button>
             </div>
         </div>
-        
-        <div id="mobile-menu" class="hidden xl:hidden bg-black/95 backdrop-blur-lg border-t border-gray-800/60 px-4 py-4 space-y-4 text-sm font-bold uppercase tracking-widest overflow-y-auto max-h-[70vh]">
+
+        <div id="mobile-menu"
+            class="hidden xl:hidden bg-black/95 backdrop-blur-lg border-t border-gray-800/60 px-4 py-4 space-y-4 text-sm font-bold uppercase tracking-widest overflow-y-auto max-h-[70vh]">
             <a href="index.html" class="block text-gray-400 hover:text-white transition">Utama</a>
             <a href="kategori-nasional.html" class="block text-gray-400 hover:text-white transition">Nasional</a>
             <a href="kategori-jabodetabek.html" class="block text-gray-400 hover:text-white transition">Jabodetabek</a>
-            
+
             <!-- Mobile Accordion Banten -->
             <div>
-                <button id="mobile-banten-btn" class="flex items-center justify-between w-full text-gray-400 hover:text-white transition">
+                <button id="mobile-banten-btn"
+                    class="flex items-center justify-between w-full text-gray-400 hover:text-white transition">
                     <span>Banten</span>
-                    <svg id="mobile-banten-icon" class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg id="mobile-banten-icon" class="w-5 h-5 transition-transform" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
                 </button>
                 <div id="mobile-banten-menu" class="hidden flex-col pl-4 mt-3 space-y-3 border-l-2 border-gray-800">
-                    <a href="kategori-banten.html" class="block text-xs text-gray-500 hover:text-amber-400 transition">Semua Banten</a>
-                    <a href="kategori-lebak-today.html" class="block text-xs text-gray-500 hover:text-amber-400 transition">Lebak Today</a>
-                    <a href="kategori-cilegon-today.html" class="block text-xs text-gray-500 hover:text-amber-400 transition">Cilegon Today</a>
-                    <a href="kategori-pandeglang-today.html" class="block text-xs text-gray-500 hover:text-amber-400 transition">Pandeglang Today</a>
-                    <a href="kategori-serang-today.html" class="block text-xs text-gray-500 hover:text-amber-400 transition">Serang Today</a>
-                    <a href="kategori-tangerang-today.html" class="block text-xs text-gray-500 hover:text-amber-400 transition">Tangerang Today</a>
+                    <a href="kategori-banten.html"
+                        class="block text-xs text-gray-500 hover:text-amber-400 transition">Semua Banten</a>
+                    <a href="kategori-lebak-today.html"
+                        class="block text-xs text-gray-500 hover:text-amber-400 transition">Lebak Today</a>
+                    <a href="kategori-cilegon-today.html"
+                        class="block text-xs text-gray-500 hover:text-amber-400 transition">Cilegon Today</a>
+                    <a href="kategori-pandeglang-today.html"
+                        class="block text-xs text-gray-500 hover:text-amber-400 transition">Pandeglang Today</a>
+                    <a href="kategori-serang-today.html"
+                        class="block text-xs text-gray-500 hover:text-amber-400 transition">Serang Today</a>
+                    <a href="kategori-tangerang-today.html"
+                        class="block text-xs text-gray-500 hover:text-amber-400 transition">Tangerang Today</a>
                 </div>
             </div>
 
             <a href="kategori-budaya.html" class="block text-gray-400 hover:text-white transition">Budaya</a>
-            <a href="kategori-travel-kuliner.html" class="block text-gray-400 hover:text-white transition">Travel & Kuliner</a>
-            <a href="kategori-hukum-kriminal.html" class="block text-gray-400 hover:text-white transition">Hukum & Kriminal</a>
+            <a href="kategori-travel-kuliner.html" class="block text-gray-400 hover:text-white transition">Travel &
+                Kuliner</a>
+            <a href="kategori-hukum-kriminal.html" class="block text-gray-400 hover:text-white transition">Hukum &
+                Kriminal</a>
             <a href="kategori-olahraga.html" class="block text-gray-400 hover:text-white transition">Olahraga</a>
             <a href="kategori-teknologi.html" class="block text-gray-400 hover:text-white transition">Teknologi</a>
             <a href="kategori-otomotif.html" class="block text-gray-400 hover:text-white transition">Otomotif</a>
-            
+
             <hr class="border-gray-800">
             <a href="search.html" class="block text-gray-400 hover:text-white transition">Pencarian</a>
             <a href="pasang-iklan.html" class="block text-gray-400 hover:text-white transition">Pasang Iklan</a>
@@ -114,8 +160,11 @@
             <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Cari Berita</h1>
             <!-- Search Bar -->
             <div id="search-bar" class="relative max-w-2xl mx-auto">
-                <input type="text" id="search-input" placeholder="Ketik kata kunci berita..." value="RUU Kesehatan" class="w-full bg-[#0a0a0a] border border-gray-700 rounded-xl px-6 py-4 pr-14 text-base text-white placeholder-gray-600 focus:border-amber-400 focus:outline-none focus:ring-1 focus:ring-amber-400/30 transition">
-                <button id="search-submit" class="absolute right-2 top-1/2 -translate-y-1/2 bg-amber-400 hover:bg-amber-300 text-black w-10 h-10 rounded-lg flex items-center justify-center transition font-bold" aria-label="Search">
+                <input type="text" id="search-input" placeholder="Ketik kata kunci berita..." value="RUU Kesehatan"
+                    class="w-full bg-[#0a0a0a] border border-gray-700 rounded-xl px-6 py-4 pr-14 text-base text-white placeholder-gray-600 focus:border-amber-400 focus:outline-none focus:ring-1 focus:ring-amber-400/30 transition">
+                <button id="search-submit"
+                    class="absolute right-2 top-1/2 -translate-y-1/2 bg-amber-400 hover:bg-amber-300 text-black w-10 h-10 rounded-lg flex items-center justify-center transition font-bold"
+                    aria-label="Search">
                     🔍
                 </button>
             </div>
@@ -124,8 +173,10 @@
         <!-- Filters -->
         <div id="search-filters" class="flex flex-wrap items-center gap-4 mb-8 pb-6 border-b border-gray-800/60">
             <div>
-                <label for="filter-category" class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-1">Kategori</label>
-                <select id="filter-category" class="bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-xs text-white focus:border-amber-400 focus:outline-none transition">
+                <label for="filter-category"
+                    class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-1">Kategori</label>
+                <select id="filter-category"
+                    class="bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-xs text-white focus:border-amber-400 focus:outline-none transition">
                     <option value="">Semua Kategori</option>
                     <option value="nasional" selected>Nasional</option>
                     <option value="teknologi">Teknologi</option>
@@ -133,8 +184,11 @@
                 </select>
             </div>
             <div>
-                <label for="filter-date" class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-1">Rentang Waktu</label>
-                <select id="filter-date" class="bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-xs text-white focus:border-amber-400 focus:outline-none transition">
+                <label for="filter-date"
+                    class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-1">Rentang
+                    Waktu</label>
+                <select id="filter-date"
+                    class="bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-xs text-white focus:border-amber-400 focus:outline-none transition">
                     <option value="all">Semua Waktu</option>
                     <option value="today">Hari Ini</option>
                     <option value="week" selected>7 Hari Terakhir</option>
@@ -142,8 +196,10 @@
                 </select>
             </div>
             <div>
-                <label for="filter-sort" class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-1">Urutkan</label>
-                <select id="filter-sort" class="bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-xs text-white focus:border-amber-400 focus:outline-none transition">
+                <label for="filter-sort"
+                    class="block text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-1">Urutkan</label>
+                <select id="filter-sort"
+                    class="bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-xs text-white focus:border-amber-400 focus:outline-none transition">
                     <option value="relevant">Paling Relevan</option>
                     <option value="newest">Terbaru</option>
                     <option value="popular">Terpopuler</option>
@@ -153,7 +209,8 @@
 
         <!-- Search Results Info -->
         <div class="flex items-center justify-between mb-6">
-            <p class="text-sm text-gray-400">Menampilkan <strong class="text-white">12 hasil</strong> untuk "<strong class="text-amber-400">RUU Kesehatan</strong>"</p>
+            <p class="text-sm text-gray-400">Menampilkan <strong class="text-white">12 hasil</strong> untuk "<strong
+                    class="text-amber-400">RUU Kesehatan</strong>"</p>
             <span class="text-xs text-gray-600">Kategori: Nasional • 7 hari terakhir</span>
         </div>
 
@@ -161,9 +218,12 @@
         <div id="search-results" class="space-y-6">
 
             <!-- Result 1 -->
-            <a href="detail.html" class="group flex flex-col sm:flex-row gap-5 bg-[#0a0a0a] border border-gray-800/60 rounded-xl overflow-hidden hover:border-amber-500/50 transition-all p-4">
+            <a href="detail.html"
+                class="group flex flex-col sm:flex-row gap-5 bg-[#0a0a0a] border border-gray-800/60 rounded-xl overflow-hidden hover:border-amber-500/50 transition-all p-4">
                 <div class="sm:w-48 h-32 sm:h-auto bg-gray-800 rounded-lg overflow-hidden shrink-0">
-                    <div class="w-full h-full group-hover:scale-105 transition-transform duration-500 flex items-center justify-center text-gray-600 font-semibold text-sm">[GAMBAR]</div>
+                    <div
+                        class="w-full h-full group-hover:scale-105 transition-transform duration-500 flex items-center justify-center text-gray-600 font-semibold text-sm">
+                        [GAMBAR]</div>
                 </div>
                 <div class="flex flex-col justify-center flex-grow">
                     <div class="flex items-center gap-2 mb-2">
@@ -171,15 +231,22 @@
                         <span class="text-gray-700">•</span>
                         <span class="text-[11px] text-gray-500">20 Sep 2026</span>
                     </div>
-                    <h3 class="text-base font-bold text-white group-hover:text-amber-400 transition-colors leading-snug mb-2">Ketegangan di Parlemen: Dua Fraksi Bersitegang Soal RUU Kesehatan</h3>
-                    <p class="text-sm text-gray-500 line-clamp-2">Debat panas mewarnai sidang paripurna siang ini setelah fraksi oposisi secara tegas menolak klausul privasi data dalam RUU Kesehatan terbaru.</p>
+                    <h3
+                        class="text-base font-bold text-white group-hover:text-amber-400 transition-colors leading-snug mb-2">
+                        Ketegangan di Parlemen: Dua Fraksi Bersitegang Soal RUU Kesehatan</h3>
+                    <p class="text-sm text-gray-500 line-clamp-2">Debat panas mewarnai sidang paripurna siang ini
+                        setelah fraksi oposisi secara tegas menolak klausul privasi data dalam RUU Kesehatan terbaru.
+                    </p>
                 </div>
             </a>
 
             <!-- Result 2 -->
-            <a href="detail.html" class="group flex flex-col sm:flex-row gap-5 bg-[#0a0a0a] border border-gray-800/60 rounded-xl overflow-hidden hover:border-amber-500/50 transition-all p-4">
+            <a href="detail.html"
+                class="group flex flex-col sm:flex-row gap-5 bg-[#0a0a0a] border border-gray-800/60 rounded-xl overflow-hidden hover:border-amber-500/50 transition-all p-4">
                 <div class="sm:w-48 h-32 sm:h-auto bg-gray-800 rounded-lg overflow-hidden shrink-0">
-                    <div class="w-full h-full group-hover:scale-105 transition-transform duration-500 flex items-center justify-center text-gray-600 font-semibold text-sm">[GAMBAR]</div>
+                    <div
+                        class="w-full h-full group-hover:scale-105 transition-transform duration-500 flex items-center justify-center text-gray-600 font-semibold text-sm">
+                        [GAMBAR]</div>
                 </div>
                 <div class="flex flex-col justify-center flex-grow">
                     <div class="flex items-center gap-2 mb-2">
@@ -187,15 +254,21 @@
                         <span class="text-gray-700">•</span>
                         <span class="text-[11px] text-gray-500">19 Sep 2026</span>
                     </div>
-                    <h3 class="text-base font-bold text-white group-hover:text-amber-400 transition-colors leading-snug mb-2">Pakar Hukum: Klausul Privasi Data RUU Kesehatan Masih Lemah</h3>
-                    <p class="text-sm text-gray-500 line-clamp-2">Akademisi dari Universitas Indonesia menyoroti beberapa pasal krusial yang dinilai belum cukup melindungi data rekam medis pasien.</p>
+                    <h3
+                        class="text-base font-bold text-white group-hover:text-amber-400 transition-colors leading-snug mb-2">
+                        Pakar Hukum: Klausul Privasi Data RUU Kesehatan Masih Lemah</h3>
+                    <p class="text-sm text-gray-500 line-clamp-2">Akademisi dari Universitas Indonesia menyoroti
+                        beberapa pasal krusial yang dinilai belum cukup melindungi data rekam medis pasien.</p>
                 </div>
             </a>
 
             <!-- Result 3 -->
-            <a href="detail.html" class="group flex flex-col sm:flex-row gap-5 bg-[#0a0a0a] border border-gray-800/60 rounded-xl overflow-hidden hover:border-amber-500/50 transition-all p-4">
+            <a href="detail.html"
+                class="group flex flex-col sm:flex-row gap-5 bg-[#0a0a0a] border border-gray-800/60 rounded-xl overflow-hidden hover:border-amber-500/50 transition-all p-4">
                 <div class="sm:w-48 h-32 sm:h-auto bg-gray-800 rounded-lg overflow-hidden shrink-0">
-                    <div class="w-full h-full group-hover:scale-105 transition-transform duration-500 flex items-center justify-center text-gray-600 font-semibold text-sm">[GAMBAR]</div>
+                    <div
+                        class="w-full h-full group-hover:scale-105 transition-transform duration-500 flex items-center justify-center text-gray-600 font-semibold text-sm">
+                        [GAMBAR]</div>
                 </div>
                 <div class="flex flex-col justify-center flex-grow">
                     <div class="flex items-center gap-2 mb-2">
@@ -203,15 +276,21 @@
                         <span class="text-gray-700">•</span>
                         <span class="text-[11px] text-gray-500">18 Sep 2026</span>
                     </div>
-                    <h3 class="text-base font-bold text-white group-hover:text-amber-400 transition-colors leading-snug mb-2">Menkes: Draf RUU Kesehatan Sudah Akomodasi Masukan Publik</h3>
-                    <p class="text-sm text-gray-500 line-clamp-2">Kementerian Kesehatan mengklaim telah memasukkan lebih dari 200 masukan dari organisasi masyarakat sipil dan tenaga kesehatan.</p>
+                    <h3
+                        class="text-base font-bold text-white group-hover:text-amber-400 transition-colors leading-snug mb-2">
+                        Menkes: Draf RUU Kesehatan Sudah Akomodasi Masukan Publik</h3>
+                    <p class="text-sm text-gray-500 line-clamp-2">Kementerian Kesehatan mengklaim telah memasukkan lebih
+                        dari 200 masukan dari organisasi masyarakat sipil dan tenaga kesehatan.</p>
                 </div>
             </a>
 
             <!-- Result 4 -->
-            <a href="detail.html" class="group flex flex-col sm:flex-row gap-5 bg-[#0a0a0a] border border-gray-800/60 rounded-xl overflow-hidden hover:border-amber-500/50 transition-all p-4">
+            <a href="detail.html"
+                class="group flex flex-col sm:flex-row gap-5 bg-[#0a0a0a] border border-gray-800/60 rounded-xl overflow-hidden hover:border-amber-500/50 transition-all p-4">
                 <div class="sm:w-48 h-32 sm:h-auto bg-gray-800 rounded-lg overflow-hidden shrink-0">
-                    <div class="w-full h-full group-hover:scale-105 transition-transform duration-500 flex items-center justify-center text-gray-600 font-semibold text-sm">[GAMBAR]</div>
+                    <div
+                        class="w-full h-full group-hover:scale-105 transition-transform duration-500 flex items-center justify-center text-gray-600 font-semibold text-sm">
+                        [GAMBAR]</div>
                 </div>
                 <div class="flex flex-col justify-center flex-grow">
                     <div class="flex items-center gap-2 mb-2">
@@ -219,8 +298,11 @@
                         <span class="text-gray-700">•</span>
                         <span class="text-[11px] text-gray-500">15 Sep 2026</span>
                     </div>
-                    <h3 class="text-base font-bold text-white group-hover:text-amber-400 transition-colors leading-snug mb-2">Koalisi Masyarakat Sipil Ajukan 5 Poin Revisi RUU Kesehatan</h3>
-                    <p class="text-sm text-gray-500 line-clamp-2">Lima organisasi besar bersatu mengajukan revisi substansial terhadap RUU yang dinilai mengancam hak privasi warga.</p>
+                    <h3
+                        class="text-base font-bold text-white group-hover:text-amber-400 transition-colors leading-snug mb-2">
+                        Koalisi Masyarakat Sipil Ajukan 5 Poin Revisi RUU Kesehatan</h3>
+                    <p class="text-sm text-gray-500 line-clamp-2">Lima organisasi besar bersatu mengajukan revisi
+                        substansial terhadap RUU yang dinilai mengancam hak privasi warga.</p>
                 </div>
             </a>
         </div>
@@ -228,13 +310,26 @@
         <!-- Pagination -->
         <div class="mt-12 flex items-center justify-center border-t border-gray-800/60 pt-8">
             <nav id="pagination" class="flex items-center gap-2" aria-label="Pagination">
-                <a href="#" class="p-2.5 text-gray-500 hover:text-white hover:bg-gray-800 rounded-lg transition" aria-label="Previous page">
-                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd" /></svg>
+                <a href="#" class="p-2.5 text-gray-500 hover:text-white hover:bg-gray-800 rounded-lg transition"
+                    aria-label="Previous page">
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
+                            clip-rule="evenodd" />
+                    </svg>
                 </a>
-                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-lg bg-amber-400 text-black font-bold" aria-current="page">1</a>
-                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-lg text-gray-400 hover:bg-gray-800 transition font-bold">2</a>
-                <a href="#" class="p-2.5 text-gray-500 hover:text-white hover:bg-gray-800 rounded-lg transition" aria-label="Next page">
-                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" /></svg>
+                <a href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-amber-400 text-black font-bold"
+                    aria-current="page">1</a>
+                <a href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-lg text-gray-400 hover:bg-gray-800 transition font-bold">2</a>
+                <a href="#" class="p-2.5 text-gray-500 hover:text-white hover:bg-gray-800 rounded-lg transition"
+                    aria-label="Next page">
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                            clip-rule="evenodd" />
+                    </svg>
                 </a>
             </nav>
         </div>
@@ -245,8 +340,10 @@
         <div class="max-w-7xl mx-auto px-4 py-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
                 <div class="md:col-span-1">
-                    <a href="index.html" class="text-2xl font-extrabold tracking-tight text-white">NEXUS<span class="text-amber-400">.</span></a>
-                    <p class="text-sm text-gray-500 mt-3 leading-relaxed">Portal berita modern Indonesia. Menyajikan informasi terkini, terpercaya, dan mendalam.</p>
+                    <a href="index.html" class="text-2xl font-extrabold tracking-tight text-white">NEXUS<span
+                            class="text-amber-400">.</span></a>
+                    <p class="text-sm text-gray-500 mt-3 leading-relaxed">Portal berita modern Indonesia. Menyajikan
+                        informasi terkini, terpercaya, dan mendalam.</p>
                 </div>
                 <div>
                     <h4 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Navigasi</h4>
@@ -274,7 +371,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800/60 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div
+                class="border-t border-gray-800/60 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
                 <div class="text-xs text-gray-600">&copy; 2026 Nexus Media Group. All rights reserved.</div>
                 <div class="flex gap-4 text-xs text-gray-600">
                     <a href="#" class="hover:text-white transition">Privacy Policy</a>
@@ -284,11 +382,11 @@
         </div>
     </footer>
 
-        <script>
-        document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
+    <script>
+        document.getElementById('mobile-menu-btn')?.addEventListener('click', function () {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
-        document.getElementById('mobile-banten-btn')?.addEventListener('click', function() {
+        document.getElementById('mobile-banten-btn')?.addEventListener('click', function () {
             const menu = document.getElementById('mobile-banten-menu');
             const icon = document.getElementById('mobile-banten-icon');
             menu.classList.toggle('hidden');
@@ -297,4 +395,5 @@
         });
     </script>
 </body>
+
 </html>
